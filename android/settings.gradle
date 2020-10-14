@@ -1,3 +1,14 @@
-include ':number_trivia'
 rootProject.name='My Application'
 include ':app'
+
+setBinding(new Binding([gradle:this]))
+
+evaluate(
+        new File(
+                settingsDir.parentFile,
+                'number_trivia_module/.android/include_flutter.groovy'
+        )
+)
+
+include ':number_trivia_module'
+project(':number_trivia_module').projectDir = new File('../number_trivia_module')
