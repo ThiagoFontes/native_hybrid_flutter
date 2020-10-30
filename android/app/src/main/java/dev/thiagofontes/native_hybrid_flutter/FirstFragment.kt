@@ -31,7 +31,9 @@ class FirstFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.flutter_module_button).setOnClickListener {
-            startActivity(context?.let { it1 -> FlutterActivity.createDefaultIntent(it1) })
+            startActivity(context?.let { it1 ->
+                FlutterActivity.withCachedEngine("flutter_engine").build(it1)
+            })
         }
     }
 }
