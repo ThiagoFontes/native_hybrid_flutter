@@ -1,4 +1,4 @@
-# number_trivia_module
+# flutter_module
 
 A new flutter module project.
 

@@ -6,9 +6,9 @@ setBinding(new Binding([gradle:this]))
 evaluate(
         new File(
                 settingsDir.parentFile,
-                'number_trivia_module/.android/include_flutter.groovy'
+                'flutter_module/.android/include_flutter.groovy'
         )
 )
 
-include ':number_trivia_module'
-project(':number_trivia_module').projectDir = new File('../number_trivia_module')
+include ':flutter_module'
+project(':flutter_module').projectDir = new File('../flutter_module')
